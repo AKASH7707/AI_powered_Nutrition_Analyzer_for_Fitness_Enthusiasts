@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>nutrition_analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/image.css')}}">
+<script src="{{url_for('static', filename='js/image.js')}}"></script>
+</head>
+<body>
+    <img id="image_bc" src="{{ url_for('static',filename='image/image.jpg')}}">
+    <div class="topnav">
+        <a class="active" href="/" >Home</a>
+        <a href="/image">Classify</a>
+	<h1>AI-powered Nutrition Analyzer for Fitness Enthusiasts</h1>
+    </div>
+
+    <h1>Upload image to classify</h1>
+    <div id="cont">
+
+        <form action="/predict" id="upload-file" method="post" enctype="multipart/form-data">
+            <div class="label_div">
+                <label for="imageUpload" class="upload-label" style="cursor: pointer">choose...
+                </label></div>
+            <input type="file" name="image" id="imageUpload" accept="image/*" style="display:none"  onchange="loadFile(event)">
+            <img id="output" width="300">
+            <button type="submit" id="submit" disabled>classify</button>
+        </form>
+    </div>
+
+</body>
+</html>
