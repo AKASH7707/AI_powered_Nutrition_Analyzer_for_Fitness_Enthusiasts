@@ -19,7 +19,7 @@ there is a need for model to find the nutrition content present in food.
 
 ## 2. 📂 Project Structure
 
-'''
+```
 AI_POWERED_NUTRITION_ANALYZER_FOR_FITNESS_ENTHUSIASTS/
 ├── Final_Deliverables/
 │   └── Final_code/
@@ -55,7 +55,7 @@ AI_POWERED_NUTRITION_ANALYZER_FOR_FITNESS_ENTHUSIASTS/
 ├── nutrient analyzer.pptx
 ├── Prepart milestone & Activity List.docx
 └── Readme.md
-'''
+```
 
 ## 3. Installation
 ### 3.1 **Colne the repository**
