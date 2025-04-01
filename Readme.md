@@ -1,4 +1,5 @@
-# AI_powered_Nutrition_Analyzer_for_Fitness_Enthusiasts
+# AI powered Nutrition Analyzer for Fitness Enthusiasts
+![nutrition analyzer](https://github.com/user-attachments/assets/d3c78cab-b707-4ed3-977f-af28920d165f)
 
 ### 1.1 Project Overview:
 The main aim of the project is to building a model which is used for
@@ -14,8 +15,6 @@ exploring nutrition patterns and maintain a healthy diet. Nutritional analysis i
 process of determining the nutritional content of food. It is a vital part of analytical
 chemical composition, processing, quality control and contamination of food. So
 there is a need for model to find the nutrition content present in food.
-
-# AI Powered Nutrition Analyzer for Fitness Enthusiasts
 
 ## 2. 📂 Project Structure
 
