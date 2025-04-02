@@ -52,13 +52,42 @@ def launch():
 def nutrition(index):
     query = index
     api_url = 'https://api.api-ninjas.com/v1/nutrition?query={}'.format(query)
-    response = requests.get(api_url, headers={'5d797ab107mshe668f26bd044e64p1ffd34jsnf47bfa9a8ee4': 'calorieninjas.p.rapidapi.com'})
+    response = requests.get(api_url, headers={'X-Api-Key': 'yourkey'})
     if response.status_code == requests.codes.ok:
-        print(response.text)
-        return response.json()['items']
+        # Parse the JSON response
+        data = response.json()
+        if data:
+            item = data[0]  # Access the first item in the list (e.g., "banana")
+            
+            # Extract individual nutritional values
+            name = item.get("name", "N/A")
+            fat_total = item.get("fat_total_g", "N/A")
+            fat_saturated = item.get("fat_saturated_g", "N/A")
+            sodium = item.get("sodium_mg", "N/A")
+            potassium = item.get("potassium_mg", "N/A")
+            cholesterol = item.get("cholesterol_mg", "N/A")
+            carbohydrates = item.get("carbohydrates_total_g", "N/A")
+            fiber = item.get("fiber_g", "N/A")
+            sugar = item.get("sugar_g", "N/A")
+            
+            # Format the output as a text string
+            output = f"""
+            Nutritional Information for {name}:
+            Total Fat: {fat_total}g, 
+            Saturated Fat: {fat_saturated}g, 
+            Sodium: {sodium}mg, 
+            Potassium: {potassium}mg, 
+            Cholesterol: {cholesterol}mg, 
+            Carbohydrates: {carbohydrates}g, 
+            Fiber: {fiber}g, 
+            Sugar: {sugar}g
+            """
+            return output.strip()  # Strip unnecessary leading/trailing spaces
+        else:
+            return "No data found for the given query."
     else:
-        print("Error:", response.status_code, response.text)
-
-
+        # If the API call failed, return the error status
+        return f"Error: {response.status_code} - {response.text}"
+    
 if __name__=='__main__':
     app.run()
