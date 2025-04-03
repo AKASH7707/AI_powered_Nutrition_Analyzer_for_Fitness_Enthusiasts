@@ -3,7 +3,7 @@
 
 ### 1.1 Project Overview:
 The main aim of the project is to building a model which is used for
-classifying the fruit depends on the different characteristics like color, shape,
+classifying the fruit depends on the different characteristics like colour, shape,
 texture etc. Here the user can capture the images of different fruits and the image
 will be sent to the trained model. The model analyses the image and detect
 nutrition based on the fruits like(Sugar, Fiber, Protein, Calories, etc...).
